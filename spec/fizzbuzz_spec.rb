@@ -25,4 +25,16 @@ describe 'fizzbuzz' do
   it 'returns "fizzbuzz" when passed 15' do
     expect(fizzbuzz(15)).to eq 'fizzbuzz'
   end
+  it 'returns "fizzbuzz" for all multiples of 5 and 3' do
+    expect(fizzbuzz(30)).to eq 'fizzbuzz'
+    expect(fizzbuzz(45)).to eq 'fizzbuzz'
+    expect(fizzbuzz(60)).to eq 'fizzbuzz'
+    expect(fizzbuzz(90)).to eq 'fizzbuzz'
+  end
+  it 'returns the argument if it does not devide by 3 or 5' do
+    expect(fizzbuzz(22)).to eq 22
+    expect(fizzbuzz(2)).to eq 2
+    expect(fizzbuzz(49)).to eq 49
+    expect(fizzbuzz(91)).to eq 91
+  end
 end
